@@ -1,25 +1,17 @@
-# CGAProject
-Dies ist das Template Projekt für die Abschlussprojekte im Modul Computergrafik und Animation an der TH Köln.
-
-Bitte forken Sie dieses Projekt und entwickeln Sie Ihr Abschlussprojekt in diesem Fork weiter. Denken Sie daran uwemuesse und martineisemann als Collaborators hinzuzufügen, damit wir darauf zugreifen können.
-
-Löschen Sie als erstes den Abschnitt CGAProjekt in dieser Datei und füllen Sie den Rest entsprechend aus für die Abgabe. 
-
 # Projektname
-Fügen Sie ihren Projektnamen hinzu
+Save the universe!
 
 # Teammitglieder
-Listen Sie hier noch einmal alle Teammitglieder auf.
-- Armin Anfang
-- Berta Beliebig
-- Carola Coautor
+Sabine Kapinos
 
 # Featureliste 
-Listen Sie hier alle relevanten Features als Liste mit sinnvoller Reihenfolge auf mit Angabe wer das Feature implementiert hat.
+- Dynamische Kamera (Steuerung mittels QWAS, Mausbewegung, Maustasten, Mausscroll)
+- Verschiedene Shaderprogramme (verschieden für ausgewählte Objekte): GeometryShader, ToonShader, PhongShader, SpaceBoxShader. Wechsel zwischen Phong und Toon mittel T/B.
+- Dynamische Geometrie (pulsierende/pochende Viren)
+- Szenegraph (Sonne parent der Planeten, Planeten parent der Monde, Camera parent der Spritzenmunition)
+- 3D Objekte (Planeten, Spritzen, GratulationsSchaf, Schild "you saved the universe")
+- SpaceBox
+- Licht (PointLight, AmbientLight, sun, spaceBox, viren, Licht verändert sich nach Abschuss aller Viren)
+- Spiel (Universum starr und dunkel, da von Viren befallen - Abschießen von Viren mit Spritzen (nachladbar) - nach Abschuss aller Viren setzen Rotationen ein, Sonne leuchtet,   Licht verändert sich)
+- Rotationen (setzt ein nach Abschuss aller Viren)
 
-Bspw.
-
-- Verschiedene Kameramodelle (Wechsel zwischen orthographischer und perspektivischer Kamera mittels "c") (Berta)
-- Dynamische Kamera (Steuerung mittels Maus und "WASD" auf der Tastatur) (Carola und Armin)
-- Verschiedene Shaderprogramme (Wechsel mittels "s") (Carola)
-- ...
