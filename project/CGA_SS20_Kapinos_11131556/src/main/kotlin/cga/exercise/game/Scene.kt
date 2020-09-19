@@ -515,17 +515,13 @@ class Scene(private val window: GameWindow) {
 
             for (i in 0..(virusArray.size - 1)) {
                 val wahreVirenposition = virusArray[i].getWorldPosition().add(virusArray[i].getCenterOffset())
-                maxVirenDistanz = Math.max(maxVirenDistanz, camera.getWorldPosition().sub(
-                        wahreVirenposition)
-                        .length().absoluteValue)
+                maxVirenDistanz = Math.max(maxVirenDistanz, camera.getWorldPosition().sub(wahreVirenposition).length().absoluteValue)
             }
             for (i in 0..(virusArray.size - 1)) {
                 for (j in 0..(fliegendeSpritzen.size - 1)) {
 
                     val wahreVirenposition = virusArray[i].getWorldPosition().add(virusArray[i].getCenterOffset())
-                    val distanzSpritzeZuVirus = spritzenMunition[j].getWorldPosition().sub(
-                            wahreVirenposition)
-                            .length().absoluteValue
+                    val distanzSpritzeZuVirus = spritzenMunition[j].getWorldPosition().sub(wahreVirenposition).length().absoluteValue
 
                     //println("Distanz Spritze " + j + " zum Virus " + i + ": " + distanzSpritzeZuVirus);
 
@@ -540,10 +536,10 @@ class Scene(private val window: GameWindow) {
                         unsichtbareSpritzen[j] = true                        //UND die Spritze wird unsichtbar
                     } else { // Vorbei geflogen
                         if (fliegendeSpritzen[j] &&                             //WENN die Spritze fliegt
-                                spritzenMunition[j].getWorldPosition().sub(     //UND die Spritze 0.1 * so weit von der camera entfernt ist, wie das **ENTSPRECHENDEN**Virus
+                                spritzenMunition[j].getWorldPosition().sub(     //UND die Spritze 0.8 * so weit von der camera entfernt ist, wie das **ENTSPRECHENDEN**Virus
                                         camera.getWorldPosition())
                                         .length().absoluteValue >
-                                0.1 * maxVirenDistanz
+                                0.8 * maxVirenDistanz
                         ) {
                             fliegendeSpritzen[j] = false                      //dann stoppt die Spritze den Flug
                             unsichtbareSpritzen[j] = true                     //UND die Spritze wird unsichtbar
@@ -556,7 +552,7 @@ class Scene(private val window: GameWindow) {
 
             for (i in 0..(fliegendeSpritzen.size - 1)) {
                 if (fliegendeSpritzen[i]) {
-                    spritzenMunition[i].translateLocal(Vector3f(0.0f, 0f, -500f * dt))
+                    spritzenMunition[i].translateLocal(Vector3f(0.0f, 0f, -600f * dt))
                 }
             }
 
