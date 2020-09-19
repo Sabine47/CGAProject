@@ -534,16 +534,16 @@ class Scene(private val window: GameWindow) {
                             fliegendeSpritzen[j] &&                         //UND die Spritze im Spritzenarray in die definierte Nähe des **ENTSPRECHENDEN** Virus kommt
                             distanzSpritzeZuVirus < toleranz
                     ) {
-                        //println("Visurs " + i + " getroffen bei Entfernung von " + distanzSpritzeZuVirus + " durch Spritze " + j);
+                        //println("Virus " + i + " getroffen bei Entfernung von " + distanzSpritzeZuVirus + " durch Spritze " + j);
                         aliveArray[i] = false                                //DANN wird **DER ENTSPRECHENDE** alive false gesetzt (** ENTSPRECHENDES** Virus stirbt) UND
                         fliegendeSpritzen[j] = false                         //UND die Spritze stoppt den Flug
                         unsichtbareSpritzen[j] = true                        //UND die Spritze wird unsichtbar
                     } else { // Vorbei geflogen
                         if (fliegendeSpritzen[j] &&                             //WENN die Spritze fliegt
-                                spritzenMunition[j].getWorldPosition().sub(     //UND die Spritze 2 * so weit von der camera entfernt ist, wie das **ENTSPRECHENDEN**Virus
+                                spritzenMunition[j].getWorldPosition().sub(     //UND die Spritze 0.1 * so weit von der camera entfernt ist, wie das **ENTSPRECHENDEN**Virus
                                         camera.getWorldPosition())
                                         .length().absoluteValue >
-                                1.1 * maxVirenDistanz
+                                0.1 * maxVirenDistanz
                         ) {
                             fliegendeSpritzen[j] = false                      //dann stoppt die Spritze den Flug
                             unsichtbareSpritzen[j] = true                     //UND die Spritze wird unsichtbar
@@ -556,7 +556,7 @@ class Scene(private val window: GameWindow) {
 
             for (i in 0..(fliegendeSpritzen.size - 1)) {
                 if (fliegendeSpritzen[i]) {
-                    spritzenMunition[i].translateLocal(Vector3f(0.0f, 0f, -0.4f * t))
+                    spritzenMunition[i].translateLocal(Vector3f(0.0f, 0f, -500f * dt))
                 }
             }
 
