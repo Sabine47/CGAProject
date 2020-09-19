@@ -1,0 +1,39 @@
+# Blender v2.79 (sub 0) OBJ File: ''
+# www.blender.org
+o Plane
+
+#1 links unten hinten
+v -1000.0 -1000.0 -1000.0
+
+#2 rechts unten hinten
+v 1000.0 -1000.0 -1000.0
+
+#3 rechts oben hinten
+v 1000.0 1000.0 -1000.0
+
+#4 links oben hinten
+v -1000.0 1000.0 -1000.0
+
+
+#1
+vt 0.999 0.001
+#2
+vt 0.001 0.999
+#3
+vt 0.001 0.001
+#4
+vt 0.999 0.999
+
+
+#1
+vn 0.0000 1.0000 0.0000
+
+
+s 1
+
+
+f 2/1/1 4/2/1 1/3/1
+
+f 2/1/1 3/4/1 4/2/1
+
+
